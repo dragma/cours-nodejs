@@ -20,7 +20,7 @@ Si tu connais un peu JavaScript parce qu'à un moment on a essayé de t'apprendr
     if (Math.random() > 0.5) {
       test = true;
     }
-    reutrn test;
+    return test;
   }
 
   function pile_ou_face() {
@@ -35,7 +35,7 @@ Si tu connais un peu JavaScript parce qu'à un moment on a essayé de t'apprendr
 <button onclick="pile_ou_face()">Pile ou face ?<Button>
 ```
 
-Ca a très bien marché pendant 10 ans, mais maintenant, si tu dis que tu sais coder en javascript et que tu sors ça, on te rira au nez.
+Ça a très bien marché pendant 10 ans, mais maintenant, si tu dis que tu sais coder en javascript et que tu sors ça, on te rira au nez.
 
 Si je t'ai offensé, et que tu vois pas ce qu'il y a de mal dans ce code, ce tutoriel est fait pour toi.
 
@@ -45,6 +45,10 @@ Si je t'ai offensé, et que tu vois pas ce qu'il y a de mal dans ce code, ce tut
 
 On fait un bond de 10 ans en avant.
 Javascript est devenue un language à la mode avec une ÉNORME communauté.
+
+<p align="center">
+  <img src="./img/communaute.jpg" alt="La communauté de l'anneau">
+</p>
 
 Pourquoi ? Parce qu'un jour, google a fait un nouveau moteur javascript, qu'il a appelé v8. Et ce moteur etait tellement efficace, que les gens on commencé à envisager le javascript comme language à part entière, désolidarisé de son navigateur.
 
@@ -71,6 +75,7 @@ Si tu écris var, tu mérites de mourir. Son utilisation est prohibée dans tout
 [Un peu de lecture](https://medium.com/@vincent.bocquet/var-let-const-en-js-quelles-diff%C3%A9rences-b0f14caa2049).
 
 TLDR:
+
   - `cosnt` : C'est une constante que tu ne peux pas réaffecter. Elle existe dans le bloc où elle est définie.
   - `let` : C'est une variable qui peut être réaffectée. Elle existe dans le bloc où elle est définie.
   - `var` : Tu oublies, ça ne sert plus.
@@ -122,12 +127,23 @@ Old style:
 function affiche_marque(voiture) {
   return voiture.marque;
 }
+
+console.log(affiche_marque(voiture)); // affiche 'audi'
 ```
 
 New style
 
-```es6
+```js
 const affiche_marque = ({ marque }) => marque;
+
+console.log(affiche_marque(voiture)); // affiche 'audi'
+
+// dans ce cas j'aurais très bien pu écrire
+
+// const affiche_marque = (voiture) => voiture.marque;
+
+// ça revient exactement au même
+// mais mon but c'etait de montrer la deconstruction
 ```
 
 Maintenant je souhaite créer une variable contenant le nombre de roues
