@@ -74,9 +74,9 @@ Par exemple, dans ces standards, on y trouve ça :
 
 TLDR:
 
-  - `cosnt` : C'est une constante que tu ne peux pas réaffecter. Elle existe dans le bloc où elle est définie.
-  - `let` : C'est une variable qui peut être réaffectée. Elle existe dans le bloc où elle est définie.
-  - `var` : Tu oublies, ça ne sert plus. Si tu écris var, tu mérites de mourir. Son utilisation est prohibée dans toutes les grandes guidelines.
+- `cosnt` : C'est une constante que tu ne peux pas réaffecter. Elle existe dans le bloc où elle est définie.
+- `let` : C'est une variable qui peut être réaffectée. Elle existe dans le bloc où elle est définie.
+- `var` : Tu oublies, ça ne sert plus. Si tu écris var, tu mérites de mourir. Son utilisation est prohibée dans toutes les grandes guidelines.
 
 #### Les fonctions anonymes deviennent des "arrow function"
 
@@ -169,7 +169,6 @@ console.log(nb_roues) // affiche => 4;
 
 const { nb_roues: nb_roues_bis } = voiture;
 console.log(nb_roues_bis) // affiche => 4;
-
 ```
 
 #### et bien d'autres...
