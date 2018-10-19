@@ -52,9 +52,9 @@ Javascript est devenue un language à la mode avec une ÉNORME communauté.
 
 Pourquoi ? Parce qu'un jour, google a fait un nouveau moteur javascript, qu'il a appelé v8. Et ce moteur etait tellement efficace, que les gens on commencé à envisager le javascript comme language à part entière, désolidarisé de son navigateur.
 
-Et puis tant qu'on y est, soyons fou ! Pourquoi pas penser le Javascript comme un language compatible pour le client et server, un language pour les rassembler tous !
+Et puis tant qu'on y est, soyons fou ! Pourquoi pas penser le Javascript comme un language compatible pour le client et serveur, un language pour les rassembler tous !
 
-Quelle surprise ! Des génies y ont pensé, et ça a donné [node.js](https://nodejs.org).
+Quelle surprise ! Des génies y ont pensé ! Et ça a donné [node.js](https://nodejs.org).
 
 ### ... et sur npm, les lier.
 
@@ -70,17 +70,15 @@ Par exemple, dans ces standards, on y trouve ça :
 
 #### On n'écrit plus `var`, mais `const` ou `let`;
 
-Si tu écris var, tu mérites de mourir. Son utilisation est prohibée dans toutes les grandes guidelines.
-
 [Un peu de lecture](https://medium.com/@vincent.bocquet/var-let-const-en-js-quelles-diff%C3%A9rences-b0f14caa2049).
 
 TLDR:
 
   - `cosnt` : C'est une constante que tu ne peux pas réaffecter. Elle existe dans le bloc où elle est définie.
   - `let` : C'est une variable qui peut être réaffectée. Elle existe dans le bloc où elle est définie.
-  - `var` : Tu oublies, ça ne sert plus.
+  - `var` : Tu oublies, ça ne sert plus. Si tu écris var, tu mérites de mourir. Son utilisation est prohibée dans toutes les grandes guidelines.
 
-#### les fonctions anonymes deviennent des "arrow function"
+#### Les fonctions anonymes deviennent des "arrow function"
 
 Avant on écrivait une déclaration de fonction comme ça :
 
@@ -100,11 +98,11 @@ Maintenant on écrit une lambda comme ça dans 99% du temps.
 const a = () => {
   return 'a';
 }
-// ou si la seule instructio nde la fonction est un return
+// ou si la seule instruction de la fonction est un return
 const b = () => 'b';
 ```
 
-Tu remarques la petite flêche `=>` ? Et bien bravo Sherlock, voilà pouruqoi on appelle ça une "arrow function".
+Tu remarques la petite flêche `=>` ? Et bien bravo Sherlock, voilà pourquoi on appelle ça une "arrow function".
 
 #### On peut déstructurer des objets à la volée.
 
@@ -121,7 +119,7 @@ const voiture = {
 
 Et que je veux accéder faire une fonction qui affiche la marque de cette voiture.
 
-Old style:
+Old style :
 
 ```js
 function affiche_marque(voiture) {
@@ -131,10 +129,11 @@ function affiche_marque(voiture) {
 console.log(affiche_marque(voiture)); // affiche 'audi'
 ```
 
-New style
+New style :
 
 ```js
 const affiche_marque = ({ marque }) => marque;
+// fais gaffe aux accolades, très important les accolades
 
 console.log(affiche_marque(voiture)); // affiche 'audi'
 
@@ -142,13 +141,17 @@ console.log(affiche_marque(voiture)); // affiche 'audi'
 
 // const affiche_marque = (voiture) => voiture.marque;
 
-// ça revient exactement au même
-// mais mon but c'etait de montrer la deconstruction
+// Ça revient exactement au même mais mon but c'etait de
+// montrer la deconstruction
+
+// Le premier parametre de ma fonction c'est un objet
+// voiture, je le déconstruis parce que dans ma fonction
+// je n'ai besoin QUE de la marque
 ```
 
 Maintenant je souhaite créer une variable contenant le nombre de roues
 
-Old style:
+Old style :
 
 ```js
 var nb_roues = voiture.nb_roues;
@@ -158,7 +161,7 @@ var nb_roues_bis = voiture.nb_roues;
 console.log(nb_roues_bis) // affiche => 4;
 ```
 
-New style
+New style :
 
 ```js
 const { nb_roues } = voiture;
