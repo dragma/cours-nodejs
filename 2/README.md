@@ -6,17 +6,17 @@ Aller, maintenant on va manipuler node.js avec les bases qu'on a vues au cours p
 
 ## Hello world
 
-Ouais, c'est sérieux. On va faire des hello world.
+Ouais, c'est sérieux. On va faire des hello world ! =]
 
 ### Avec node directement
 
-Lancez node la console:
-
-> les manières de laner node diffèrent selon les systemes d'exploitation.
+Lance node la console en écrivant tout simplement `node` :
 
 ![console node ](./img/1.png)
 
-A partir de là, nous somme dans la console node. On va pouvoir executer les requetes que l'on désire. Et comme ce que je désire le plus au monde, c'est qu'on me dise hello world, on va demander à nodejs de nous écrire un magnifique `Hello world`.
+> les manières de lancer node diffèrent selon les systemes d'exploitation.
+>
+A partir de là, nous somme dans la console node. On va pouvoir executer les instruction que l'on désire. Et comme ce que je désire le plus au monde, c'est qu'on me dise hello world, on va demander à nodejs de nous écrire un magnifique `Hello world`.
 
 Je te propose le code suivant. Mais libre à toi de lui demander de la manière que tu veux.
 
@@ -42,15 +42,20 @@ Tu peux ouvrir [ton éditeur de texte préféré](https://code.visualstudio.com/
 
 On a vu comment créer et executer un script simple à partir d'un fichier. Mais comment faire pour utiliser des librairies externes dans notre script node ?
 
+Il existe deux manières d'importer des modules :
+
+* Importer un fichier avec son chemin absolu ou relatif.
+* Importer un nom de module directement sans avoir à se soucier du chemin
+
 ## Les modules node
 
 ### Pourquoi ?
 
 La puissance de nodejs et du javascript actuel réside dans ses librairies (qu'on appelle modules) mises à disposition par la communauté. Alors on va nous aussi apprendre à écrire un module.
 
-Un module, c'est une sorte de script, dont on exporte certaines parties, qui seront utiles dans un scope différent que celui dans lequel on est.
+Un module, c'est une sorte de script, dont on expose certaines parties, qui seront utiles dans un scope différent que celui dans lequel on est.
 
-Dans notre cas, nous allons exporter une fonction `affiche` dont l'unique job sera d'afficher ce qu'on lui passera en paramètre.
+Dans notre cas, nous allons exposer une fonction `affiche` dont l'unique job sera d'afficher ce qu'on lui passera en paramètre.
 
 Encore une fois, la synthèse de ce que j'écris ici se trouve dans le dossier [src](./src).
 
@@ -76,7 +81,9 @@ Nous allons donc pouvoir créer un nouveau fichier qu'on nommera `helloworld_mod
 
 ```javascript
 // helloworld_module1.js
-const affiche = require('./affiche'); // on remarque ici qu'il n'est pas necessaire de renseigner l'extension '.js' du fichier
+const affiche = require('./affiche'); // on remarque ici
+// qu'il n'est pas necessaire de renseigner l'extension
+// '.js' du fichier
 
 affiche('Hello world');
 ```
@@ -85,14 +92,10 @@ On execute `helloworld_module1.js`, et voilà :
 
 ![console module affiche](./img/4.png)
 
-### node_modules
+## node_modules
 
-Il existe deux manières d'importer des modules :
 
-* Importer un fichier avec son chemin absolu ou relatif.
-* Importer un nom de module directement sans avoir à se soucier du chemin
-
-il faut savoir que la fonction `require` de nodejs var regarder par défaut, quand aucun path n'est renseigné, dans un dosser nommé `node_modules`.
+Il faut savoir que la fonction `require` de nodejs var regarder par défaut, quand aucun path n'est renseigné, dans un dosser nommé `node_modules`.
 
 Aussi si j'écris
 
