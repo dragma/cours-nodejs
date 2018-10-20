@@ -171,6 +171,43 @@ const { nb_roues: nb_roues_bis } = voiture;
 console.log(nb_roues_bis) // affiche => 4;
 ```
 
+#### On peut faire des promesses
+
+Javascript est un langage asynchrone, ce qui implique que pour beaucoup de cas, les instructions sont executées a la suite sans forcément attendre leur retour.
+
+Exemple :
+
+```javascript
+const data = axios.get('https://une.api.fr/data');
+console.log(texte); // si on fait ça, texte est affiché
+// en tant que 'Promise'
+```
+
+La promesse est un objet qui a la particularité de proposer une suite APRES que l'execution se soit terminée.
+
+La promesse est donc chaînée par deux termes
+
+1. `.then()` : en cas de succès
+2. `.catch()` : en cas d'erreur
+
+Sans rentrer dans le détail avec ces deux termes nous pouvons donc écrire ceci :
+
+
+```javascript
+const texte = axios
+  .get('https://une.api.fr/data')
+  .then(data => {
+    // data est le résultat de la requete get
+    console.log(data);
+  })
+  .catch(err => {
+    // err est une erreur (comme dans un try cath)
+    // qui est retournée, par exemple dans un cas de 404
+    console.log('ERREUR', err);
+  });
+```
+
+
 #### et bien d'autres...
 
 Il y a une tonne d'aurtes normes / syntaxe en javascript. Je pense que je t'ai listé les plus importantes. Tu tomberas forcément dessus un jour ou l'autre.
