@@ -1,0 +1,14 @@
+{
+  "name": "cours-3",
+  "version": "1.0.0",
+  "description": "cours 3 exemples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Florent Béjina",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
