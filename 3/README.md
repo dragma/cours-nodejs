@@ -59,17 +59,17 @@ Tu peux trouver la documentation d'axios [sur sa page github](https://github.com
 
 ### Problématique
 
-Disons que tu es un tres grand <strike>geek</strike> fan  de Star Wars, et que t'as envie d'en savoir un peu plus sur tes personnages préférés. Tu sais qu'il existe une API ([SWAPI](https://swapi.co/)) qui te permettrai d'en apprendre un peu plus.
+Disons que tu es un tres grand <strike>geek</strike> fan  de Star Wars, et que t'as envie d'en savoir un peu plus sur tes personnages préférés. Tu sais justement qu'il existe une API ([SWAPI](https://swapi.co/)) pour ça !
 
-Tu souhaite donc te lancer dans la création d'un petit script qui te listera les données des personnages.
+Tu souhaites donc te lancer dans la création d'un petit script qui te listera les données des personnages.
+
+Tu eux donc faire une requete http avec javascript, et t'en a aucune foutre idée de comment executer ce tour de magie.
 
 ### Recherche et installation
 
-> Problématique : tu souhaites faire une requete http avec javascript, et t'en a aucune foutre idée de comment executer ce tour de magie.
-
 Utiliser un package de quelqu'un d'autre s'apparente toujours à la même chose. Tu feras quasiment toujours les mêmes actions :
 
-1. Tu vas rechercher sur Google si un module n'existe pas déjà. Bingo ! Ç existe et ça s'appelle `axios` (il en existe d'autres mais axios est celui que j'utilise tout le temps alors voilà :D)
+1. Tu vas rechercher sur Google si un module n'existe pas déjà. Bingo ! Ça existe et ça s'appelle `axios` (il en existe d'autres mais axios est celui que j'utilise tout le temps alors voilà :D)
 2. Tu vas aller voir [sur npm](https://www.npmjs.com/package/axios) si le module est bien maintenu ou s'il est bien utilisé (une grosse communauté d'utilisateur implique en général un module robuste et utile). Au moment où j'écris ces lignes, le module a plus de 3.1 millions de téléchargements hebdomadaires (ce qui est énorme) et la dernière version du module a été publiée il y a 2 mois (donc le module est maintenu).
 3. Tu vas aller lire la documentation pour voir si tu peux arriver à le manipuler facilement.
 4. Tu vas l'installer avec `npm install --save axios`.
@@ -361,13 +361,14 @@ Et voilà ! :
 
 ![2](./img/2.png)
 
-Ce qui nous interesse ici dans ces données, ce soit les personnages. On va donc récupérer les urls en écrivant :
+Ce qui nous interesse ici dans ces données, ce sont les personnages. On va donc récupérer les urls en écrivant :
 
 ```javascript
 // méthode 1 : chainer les then
 axios.get('https://swapi.co/api/films/1')
   .then(({ data }) => data) // le then suivant prend la valeur de retour du then précédent.
-  .then(({ characters }) => console.log(characters)); // dans ce cas, then a comme premier argumetn la valeur de data du then précédent
+  .then(({ characters }) => console.log(characters)); // dans ce cas,
+  // then a comme premier argument la valeur de data du then précédent
 
 
 // méthode 2 : la déconstruction profonde
