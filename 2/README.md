@@ -28,9 +28,9 @@ console.log(helloWorld);
 ![console hello world](./img/2.png)
 
 Bravo. C'est incroyable, tu arrives à donner des instructions à node à partir de la console.
-Et comme je sais que tu es un énorme amateur de Hello world, tu vas me dire que c'est pas très pratique d'écrire tout ça à chaque vois que tu en veux un.
+Et comme je sais que tu es un énorme amateur de Hello world, tu vas me dire que c'est pas très pratique d'écrire tout ça à chaque fois que tu en veux un.
 
-Et bien tes voeux vont être récompensés, on va faire un script.
+Et bien tes voeux vont être exhausés, on va faire un script.
 
 ### Avec un script
 
