@@ -4,7 +4,7 @@ Cours 1
 
 ## Les années 2000, la piqure de rappel
 
-Avant, Javascript, c'etait une putain d'épine dans le pied. Ce language a été inventé pour s'intégrer à un navigateur et pouvoir modifier le [DOM Document](https://www.w3schools.com/jsref/dom_obj_document.asp), selon une variété d'évènement.
+Avant, Javascript, c'etait une putain d'épine dans le pied. Ce language a été inventé pour s'intégrer à un navigateur et pouvoir modifier le [DOM Document](https://www.w3schools.com/jsref/dom_obj_document.asp), selon une variété d'évènements.
 
 Exemple :
 
@@ -44,7 +44,7 @@ Si je t'ai offensé, et que tu vois pas ce qu'il y a de mal dans ce code, ce tut
 ### Un language pour les rassembler tous...
 
 On fait un bond de 10 ans en avant.
-Javascript est devenue un language à la mode avec une ÉNORME communauté.
+Javascript est devenu un language à la mode avec une ÉNORME communauté.
 
 <p align="center">
   <img src="./img/communaute.jpg" alt="La communauté de l'anneau">
