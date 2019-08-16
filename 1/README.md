@@ -178,7 +178,7 @@ Javascript est un langage asynchrone, ce qui implique que pour beaucoup de cas, 
 Exemple :
 
 ```javascript
-const data = axios.get('https://une.api.fr/data');
+const texte = axios.get('https://une.api.fr/data');
 console.log(texte); // si on fait ça, texte est affiché
 // en tant que 'Promise'
 ```
